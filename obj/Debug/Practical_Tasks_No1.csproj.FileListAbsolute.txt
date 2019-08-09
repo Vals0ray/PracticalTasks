@@ -1,0 +1,7 @@
+D:\NULP_SA\CSharp\Epam\Practical_Tasks_No1\bin\Debug\Practical_Tasks_No1.exe.config
+D:\NULP_SA\CSharp\Epam\Practical_Tasks_No1\bin\Debug\Practical_Tasks_No1.exe
+D:\NULP_SA\CSharp\Epam\Practical_Tasks_No1\bin\Debug\Practical_Tasks_No1.pdb
+D:\NULP_SA\CSharp\Epam\Practical_Tasks_No1\obj\Debug\Practical_Tasks_No1.csprojAssemblyReference.cache
+D:\NULP_SA\CSharp\Epam\Practical_Tasks_No1\obj\Debug\Practical_Tasks_No1.csproj.CoreCompileInputs.cache
+D:\NULP_SA\CSharp\Epam\Practical_Tasks_No1\obj\Debug\Practical_Tasks_No1.exe
+D:\NULP_SA\CSharp\Epam\Practical_Tasks_No1\obj\Debug\Practical_Tasks_No1.pdb

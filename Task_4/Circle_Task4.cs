@@ -1,8 +1,8 @@
 ﻿namespace Practical_Tasks_No1
 {
-    static class Circle
+    static class Circle_Task4
     {
-        private const double PI = 3.1415;
+        private const double PI = 3.1415;   
 
         public static double Circuit(double radius)
         {

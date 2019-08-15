@@ -39,9 +39,23 @@ namespace Practical_Tasks_No1
             }
 
             // Finding perimeter and square
-            perimeter = Rectangle.Perimeter(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
-            square = Rectangle.Square(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
 
+            Console.WriteLine("/n Task1 Rectangle");
+
+            Rectangle_Task1 rectangle_Task1 = new Rectangle_Task1(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
+            Console.WriteLine($"Perimetr equals {rectangle_Task1.Perimeter()}");
+            Console.WriteLine($"Perimetr equals {rectangle_Task1.Square()}");
+
+            Console.WriteLine("/n Task2 Rectangle");
+
+            Rectangle_Task2 rectangle_Task2 = new Rectangle_Task2(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
+            Console.WriteLine($"Perimetr equals {rectangle_Task2.Perimetr}");
+            Console.WriteLine($"Perimetr equals {rectangle_Task2.Square}");
+
+            Console.WriteLine("/n Task4 Rectangle");
+            
+            perimeter = Rectangle_Task4.Perimeter(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
+            square = Rectangle_Task4.Square(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
             Console.WriteLine($"Perimetr equals {perimeter}");
             Console.WriteLine($"Square equals {square}\n");
         }
@@ -49,7 +63,6 @@ namespace Practical_Tasks_No1
         public static void WorkWithCircle()
         {
             double radius;
-            double circuit, circleSquare;
 
             try
             {
@@ -63,11 +76,17 @@ namespace Practical_Tasks_No1
             }
 
             // Finding circuit and circleSquare
-            circuit = Circle.Circuit(radius);
-            circleSquare = Circle.CircleSquare(radius);
 
-            Console.WriteLine($"Circuit equals {circuit}");
-            Console.WriteLine($"CircleSquare equals {circleSquare}\n");
+            Console.WriteLine("/n Task3 Circle");
+
+            Circle_Task3 circle_Task3 = new Circle_Task3();
+            Console.WriteLine($"Circuit equals {circle_Task3.Circuit(radius)}");
+            Console.WriteLine($"CircleSquare equals {circle_Task3.CircleSquare(radius)}\n");
+
+            Console.WriteLine("/n Task4 Circle");
+
+            Console.WriteLine($"Circuit equals {Circle_Task4.Circuit(radius)}");
+            Console.WriteLine($"CircleSquare equals {Circle_Task4.CircleSquare(radius)}\n");
         }
 
         public static void WorkWithComplexNumbers()

@@ -2,13 +2,14 @@
 {
     class ComplexNumber
     {
-        public double R { get; set; }
-        public double I { get; set; }
+        public double R { get; set; } = 0;
+        public double I { get; set; } = 0;
 
+        #region constructors
         public ComplexNumber()
         {
             R = 0;
-            I = 0;
+            I = 0;                                          
         }
 
         public ComplexNumber(double r, double i)
@@ -16,8 +17,9 @@
             this.R = r;
             this.I = i;
         }
+        #endregion
 
-        #region Multiplication operator overload
+        #region operators overloading
         public static ComplexNumber operator *(ComplexNumber c1, ComplexNumber c2)
         {
             ComplexNumber complex = new ComplexNumber();
@@ -25,9 +27,7 @@
             complex.I = c1.R * c2.I + c1.I * c2.R;
             return complex;
         }
-        #endregion
 
-        #region Division operator overload
         public static ComplexNumber operator /(ComplexNumber c1, ComplexNumber c2)
         {
             ComplexNumber complex = new ComplexNumber();

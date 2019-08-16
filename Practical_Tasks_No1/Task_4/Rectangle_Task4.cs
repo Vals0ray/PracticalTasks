@@ -1,36 +1,37 @@
-﻿namespace Practical_Tasks_No1
+﻿namespace Practical_Tasks_No1.Task4
 {
-    static class Rectangle_Task4
+    internal static class Rectangle
     {
-        private static double Length_A = 0, Length_B = 0;
+        private static double lengthA = 0;
+        private static double lengthB = 0;
 
         private static void FindLength(double topLeftCorner_x, double topLeftCorner_y, double bottomRightCorner_x, double bottomRightCorner_y)
         {
             // Finding the length of the side A = | x1 - x2 |
-            Length_A = topLeftCorner_x - bottomRightCorner_x;
-            if (Length_A < 0)
+            lengthA = topLeftCorner_x - bottomRightCorner_x;
+            if (lengthA < 0)
             {
-                Length_A = Length_A * (-1);
+                lengthA = lengthA * (-1);
             }
 
             // Finding the length of the side B = | y1 - y2 |
-            Length_B = topLeftCorner_y - bottomRightCorner_y;
-            if (Length_B < 0)
+            lengthB = topLeftCorner_y - bottomRightCorner_y;
+            if (lengthB < 0)
             {
-                Length_B = Length_B * (-1);
+                lengthB = lengthB * (-1);
             }
         }
 
         public static double Perimeter(double topLeftCorner_x, double topLeftCorner_y, double bottomRightCorner_x, double bottomRightCorner_y)
         {
             FindLength(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
-            return 2 * (Length_A + Length_B);
+            return 2 * (lengthA + lengthB);
         }
 
         public static double Square(double topLeftCorner_x, double topLeftCorner_y, double bottomRightCorner_x, double bottomRightCorner_y)
         {
             FindLength(topLeftCorner_x, topLeftCorner_y, bottomRightCorner_x, bottomRightCorner_y);
-            return Length_A * Length_B;
+            return lengthA * lengthB;
         }
     }
 }

@@ -70,7 +70,7 @@
                 Imaginary = Convert.ToDouble(Console.ReadLine());
                 return true;
             }
-            catch (FormatException)
+            catch (FormatException ex)
             {
                 Console.WriteLine("Incorrect input\n" + ex.Message);
                 return false;

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practical_Tasks_No1", "Practical_Tasks_No1.csproj", "{9EAB0644-52D9-4B15-8C55-F0EA027988AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{3D29E92E-5BAB-4B8C-87B1-799ADC928448}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practical_Tasks_No2", "..\Practical_Tasks_No2\Practical_Tasks_No2.csproj", "{60DD81B1-98BF-457B-A4A2-A704170A49C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practical_Tasks_No1", "Practical_Tasks_No1\Practical_Tasks_No1.csproj", "{9EAB0644-52D9-4B15-8C55-F0EA027988AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "..\Console\Console.csproj", "{3D29E92E-5BAB-4B8C-87B1-799ADC928448}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practical_Tasks_No2", "Practical_Tasks_No2\Practical_Tasks_No2.csproj", "{60DD81B1-98BF-457B-A4A2-A704170A49C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

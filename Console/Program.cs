@@ -1,8 +1,10 @@
 ﻿namespace Console
 {
     using System;
+    using System.Collections.Generic;
     using HW1 = Practical_Tasks_No1;
     using HW2 = Practical_Tasks_No2;
+    using HW3 = Practical_Tasks_No3;
 
     class Program
     {
@@ -35,6 +37,8 @@
             HomeWork1();
 
             HomeWork2();
+
+            HomeWork3();
 
             Console.ReadKey();
         }
@@ -208,6 +212,148 @@
             HW2.IDrawable_Task4 r4 = new HW2.Rectangle_Task4(1, 2);
 
             s4.DrawAll(r4, r4, r4, s4, r4);
+        }
+
+        private static void HomeWork3()
+        {
+            /*
+             Task 1
+             */
+            Console.WriteLine("--- Task 1 ---");
+            HW3.Task1 task1 = new HW3.Task1();
+            task1.CreateRandomList();
+            task1.DrawList();
+
+            /*
+             Task 2
+             */
+            Console.WriteLine("\n--- Task 2 ---");
+            List<HW3.Person> people = new List<HW3.Person>();
+
+            HW3.Task2 task2 = new HW3.Task2();
+            List<string> phones;
+            string name;
+            byte age = 0, count = 0;
+            task2.CreateRandomList();
+
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine($"\nAdding new person number {i + 1}");
+                Console.Write("Enter Name: ");
+                name = Console.ReadLine();
+                Console.Write("Enter Age: ");
+
+                if (!byte.TryParse(Console.ReadLine(), out age))
+                {
+                    Console.WriteLine("Error!\nIncorrect input");
+                    break;
+                }
+
+                Console.Write("How many phones you need to enter?: ");
+
+                if (!byte.TryParse(Console.ReadLine(), out count))
+                {
+                    Console.WriteLine("Error!\nIncorrect input");
+                    break;
+                }
+
+                phones = new List<string>();
+
+                for (int j = 0; j < count; j++)
+                {
+                    Console.Write($"Enter phone number {j + 1}: ");
+                    phones.Add(Console.ReadLine());
+                }
+
+                people.Add(new HW3.Person() { Name = name, Age = age, PhoneNumbers = phones });
+            }
+
+            task2.AddNewPeople(people);
+            task2.DrawList();
+
+            /*
+             Task 3
+             */
+            HW3.Task3 task3 = new HW3.Task3();
+            Console.ReadKey();
+            Console.Clear();
+            List<string> strings = new List<string>();
+            byte input = 0;
+
+            while (true)
+            {
+                Console.WriteLine("\n--- Task 3 ---\nHello, what are you want to do?\n");
+
+                Console.WriteLine("[1] Create random string list");
+                Console.WriteLine("[2] Delete Repetitions in the list");
+                Console.WriteLine("[3] Delete rows that begin on Z");
+                Console.WriteLine("[4] Sorte list (z - a)");
+                Console.WriteLine("[5] Display page of the list");
+                Console.WriteLine("[6] Display all list\n");
+
+                Console.Write("Enter number from 1 to 6 -> ");
+                try
+                {
+                    input = Convert.ToByte(Console.ReadLine());
+                }
+                catch (OverflowException OverFlowExp)
+                {
+                    Console.WriteLine($"Error!\nIncorrect input\n {OverFlowExp.Message}\nPress any button to continue");
+                    Console.ReadKey();
+                    Console.Clear();
+                    continue;
+                }
+                catch (FormatException formExp)
+                {
+                    Console.WriteLine($"Error!\nIncorrect input\n{formExp.Message}");
+                    Console.WriteLine($"Program finished");
+                    Console.ReadKey();
+                    break;
+                }
+
+                if (strings.Count == 0 && input != 1)
+                {
+                    Console.WriteLine("\nError!\nFirst, create a new list\nPress any button to continue");
+                    Console.ReadKey();
+                    Console.Clear();
+                    continue;
+                }
+
+                switch (input)
+                {
+                    case 1:
+                        Console.WriteLine("\nCreated new random string list");
+                        strings = task3.GetRandomListGeneration();
+                        break;
+                    case 2:
+                        Console.WriteLine("\nDeleted Repetitions in the list");
+                        strings = task3.DeleteRepetitionsInTheList(strings);
+                        break;
+                    case 3:
+                        Console.WriteLine("\nDeleted rows that begin on Z");
+                        strings = task3.DeleteRowsThatBeginOnZ(strings);
+                        break;
+                    case 4:
+                        Console.WriteLine("\nSorted list (z - a)");
+                        strings = task3.SortList(strings);
+                        break;
+                    case 5:
+                        Console.Write("Enter page of list -> ");
+                        byte page = Convert.ToByte(Console.ReadLine());
+                        task3.DisplayPage(page, strings);
+                        break;
+                    case 6:
+                        task3.DisplayAllList(strings);
+                        break;
+                    default:
+                        Console.WriteLine("Error!\nEnter number from 1 to 6");
+                        break;
+                }
+
+                Console.WriteLine("\nPress any button to continue");
+                Console.ReadKey();
+                Console.Clear();
+            }
         }
     }
 }

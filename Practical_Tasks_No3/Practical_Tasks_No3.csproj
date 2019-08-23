@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D29E92E-5BAB-4B8C-87B1-799ADC928448}</ProjectGuid>
+    <ProjectGuid>{C1E79EA9-53B4-43ED-9082-F650AD2DA357}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Console</RootNamespace>
-    <AssemblyName>Console</AssemblyName>
+    <RootNamespace>Practical_Tasks_No3</RootNamespace>
+    <AssemblyName>Practical_Tasks_No3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,25 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task2.cs" />
+    <Compile Include="Task1.cs" />
+    <Compile Include="Task3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Practical_Tasks_No1\Practical_Tasks_No1.csproj">
-      <Project>{9eab0644-52d9-4b15-8c55-f0ea027988ab}</Project>
-      <Name>Practical_Tasks_No1</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Practical_Tasks_No2\Practical_Tasks_No2.csproj">
-      <Project>{60dd81b1-98bf-457b-a4a2-a704170a49c6}</Project>
-      <Name>Practical_Tasks_No2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Practical_Tasks_No3\Practical_Tasks_No3.csproj">
-      <Project>{c1e79ea9-53b4-43ed-9082-f650ad2da357}</Project>
-      <Name>Practical_Tasks_No3</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

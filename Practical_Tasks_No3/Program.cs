@@ -1,0 +1,10 @@
+﻿namespace Practical_Tasks_No3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+}
